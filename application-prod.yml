@@ -1,27 +1,2 @@
-spring:
-  application:
-    name: unis-gateway
-  cloud:
-#    inetutils:
-#      #这里指定了client端的IP地址  避免自动获取本机IP有问题  服务出现通信问题
-#      preferred-networks: 10.138.30.6
-    config:
-      fail-fast: true
-      discovery:
-        service-id: unis-config-server
-        enabled: true
-      profile: ${spring.profiles.active}
-      label: ${spring.profiles.active}
-    bus:  
-      trace:  
-        enabled: true    # 开启cloud bus的跟踪
-eureka:
-  instance:
-    prefer-ip-address: true
-    hostname: ${spring.cloud.client.ipAddress}
-    instance-id: http://${spring.cloud.client.ipAddress}:${server.port}
-    lease-renewal-interval-in-seconds: 5
-    lease-expiration-duration-in-seconds: 20
-  client:
-    serviceUrl:
-      defaultZone: http://unis:gip6666@localhost:1025/eureka/
+config:
+  info:lwq first test
