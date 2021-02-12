@@ -1,2 +1,2 @@
-config:
-  info:lwq first test
+server:
+  port: 3355
